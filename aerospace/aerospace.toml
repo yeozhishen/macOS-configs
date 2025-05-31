@@ -17,7 +17,7 @@ exec-on-workspace-change = ['/bin/bash', '-c',
 start-at-login = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
-enable-normalization-flatten-containers = false
+enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = false
 
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
@@ -26,7 +26,7 @@ enable-normalization-opposite-orientation-for-nested-containers = false
 accordion-padding = 30
 
 # Possible values: tiles|accordion
-default-root-container-layout = 'tiles'
+default-root-container-layout = 'accordion'
 
 # Possible values: horizontal|vertical|auto
 # 'auto' means: wide monitor (anything wider than high) gets horizontal orientation,
@@ -83,16 +83,11 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-up = 'move up'
     alt-shift-right = 'move right'
     alt-shift-down = 'move down'
-
-    # Consider using 'join-with' command as a 'split' replacement if you want to enable
-    # normalizations
-    alt-h = 'split horizontal'
-    alt-v = 'split vertical'
+    alt-shift-b = "balance-sizes"
 
     alt-f = 'fullscreen'
 
-    alt-s = 'layout v_accordion' # 'layout stacking' in i3
-    alt-w = 'layout h_accordion' # 'layout tabbed' in i3
+    alt-shift-a = 'layout v_accordion' # 'layout stacking' in i3
     alt-e = 'layout tiles horizontal vertical' # 'layout toggle split' in i3
 
     alt-shift-space = 'layout floating tiling' # 'floating toggle' in i3

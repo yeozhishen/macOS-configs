@@ -4,23 +4,51 @@ for id in $(sketchybar --query bar | jq -r '.items[]' | grep '^events' | grep -v
 done
 sketchybar -m --set events.earliest popup.drawing=toggle
 
-ICAL_OUTPUT=$(icalBuddy -n -eed -tf "%H:%M" eventsToday)
+ICAL_OUTPUT=$( icalBuddy -n -eed -tf "%H:%M" --excludeEventProps "location,notes" eventsToday)
 
 INDEX=0
 echo "$ICAL_OUTPUT" | awk '
+#{
+#  if (NR % 2 == 1) {
+#    title = $0
+#    gsub(/^• */, "", title)
+#    gsub(/ *\([^)]*\)/, "", title)
+#  } else {
+#    time = $0
+#    sub(/^[ \t]+/, "", time)
+#    sub(/[ \t]+$/, "", time)
+#
+#    if (length(title) && length(time)) {
+#      printf("󰨱 %s - %s\n", time, title)
+#    }
+#  }
+#}
 {
-  if (NR % 2 == 1) {
+  if ($0 ~ /^• /) {
+    if (title != "" && time == "") {
+      # Previous event was full-day
+      printf("󰃭 All Day - %s\n", title)
+    } else if (title != "" && time != "") {
+      # Previous event had time
+      printf("󰨱 %s - %s\n", time, title)
+    }
+    # Start new event
     title = $0
-    gsub(/^• */, "", title)
+    gsub(/^• /, "", title)
     gsub(/ *\([^)]*\)/, "", title)
-  } else {
+    time = ""
+  } else if ($0 ~ /^[ \t]*[0-9]{2}:[0-9]{2}/) {
     time = $0
     sub(/^[ \t]+/, "", time)
     sub(/[ \t]+$/, "", time)
-
-    if (length(title) && length(time)) {
-      printf("󰨱 %s - %s\n", time, title)
-    }
+  }
+}
+END {
+  # Handle last event
+  if (title != "" && time == "") {
+    printf("󰃭 All Day - %s\n", title)
+  } else if (title != "" && time != "") {
+    printf("󰨱 %s - %s\n", time, title)
   }
 }  
 '| while read -r EVENT; do
