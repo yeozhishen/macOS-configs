@@ -7,7 +7,7 @@
 - fzf (add entry in zshrc)
 - aerospace
 - sketchybar
-
+- mac-mouse-fix@2 (to remap mouse buttons to work on mac)
 ## TMUX
 - dependencies
 - tmux plugin manager (tpm)
