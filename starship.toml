@@ -16,11 +16,11 @@ $golang\
 $python\
 [](fg:#bb9af7 bg:#f7768e)\
 $docker_context\
-[](fg:#f7768e bg:#e0af68)\
+[](fg:#f7768e bg:#ff5e9c)\
 $cmd_duration\
-[](fg:#e0af68 bg:#0f0c1d)\
+[](fg:#ff5e9c bg:#0f0c1d)\
 $time\
-[](#0f0c1d)\
+[](#0f0c1d)
 \n$character"""
 
 [character]
@@ -85,10 +85,10 @@ format = "[ 󱑆 $time ]($style)"
 
 [cmd_duration]
 min_time = 1000
-format = "[  $duration ](fg:#e0af68)"
-style = "bold"
+style = "bg:#ff5e9c fg:#0f0c1d"
+format = "[  $duration ]($style)"
 
 [hostname]
 ssh_only = false
-format = "[ $hostname](bold bg:#1a1b26 fg:#bb9af7)"
+format = "[ $hostname ](bold bg:#1a1b26 fg:#bb9af7)"
 
