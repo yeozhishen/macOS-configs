@@ -33,7 +33,7 @@
       nnoremap <space> za 
       " python specific
       let g:SimpylFold_docstring_preview=1
-      au BufNewFile,BufRead *.py
+      au BufNewFile, BufRead *.py
         \ set tabstop=4
         \ set softtabstop=4
         \ set shiftwidth=4
@@ -41,7 +41,7 @@
         \ set expandtab
         \ set autoindent
         \ set fileformat=unix
-      au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+      au BufRead, BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
       let python_highlight_all=1
     '';
   };
