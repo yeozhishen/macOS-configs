@@ -3,7 +3,6 @@
     system = {
         stateVersion = 5;
         primaryUser = username; 
-    
         defaults = {
             menuExtraClock.Show24Hour = true;
             
@@ -28,7 +27,7 @@
             };
 
             NSGlobalDomain = {
-                "com.apple.swipescrolldirection" = true;  # enable natural scrolling (default to true)
+                "com.apple.swipescrolldirection" = false;  # enable natural scrolling (default to true)
                 AppleInterfaceStyle = "Dark";  # dark mode
 
                 InitialKeyRepeat = 15;  # normal minimum is 15 (225 ms), maximum is 120 (1800 ms)

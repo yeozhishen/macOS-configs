@@ -19,7 +19,6 @@
 
     userName = gituser;
     userEmail = useremail;
-
     includes = [
       {
         # use diffrent email & name for work

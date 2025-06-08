@@ -21,6 +21,7 @@
         function battery_percentage() {
             pmset -g batt | grep -o "[0-9]*%" | head -n 1
         }
+        export GIT_EDITOR=vim
         # fzf keybindings
         source <(fzf --zsh)
         # Starship prompt
