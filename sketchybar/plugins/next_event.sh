@@ -1,6 +1,6 @@
 #!/bin/bash
 # Get upcoming events for today and future
- ICAL_OUTPUT=$( icalBuddy -n -eed -tf "%H:%M" --excludeAllDayEvents --excludeEventProps "location,notes" eventsToday)
+ ICAL_OUTPUT=$( icalBuddy -n -eed -tf "%H:%M" --excludeAllDayEvents --excludeEventProps "location,notes,attendees" eventsToday)
 #
 # # Extract the first event block (title and time)
 EVENT_TITLE=$(echo "$ICAL_OUTPUT" | grep '^•' | head -n 1 | sed -E 's/^• *//; s/ *\([^)]*\)//') 
