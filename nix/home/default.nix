@@ -1,6 +1,8 @@
 { username, ...}: {
     imports = [
         ./core.nix
+        ./git.nix
+        ./shell.nix
     ];
     home = {
         username = username;

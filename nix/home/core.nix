@@ -8,5 +8,8 @@
                 theme  = "agnoster";
             };
         };
+        starship.enable = true;
+        fzf.enable = true;
+
     };
 }

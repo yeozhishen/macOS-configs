@@ -29,11 +29,11 @@
       system = "aarch64-darwin";
       hostname = "zeus";
       useremail = "yeozhishen@gmail.com";
-      
+      gituser = "yeozhishen"; 
       specialArgs = 
         inputs
         // {
-            inherit username hostname useremail;
+            inherit username hostname useremail gituser;
         }; 
       # Enable alternative shell support in nix-darwin.
       # programs.fish.enable = true;
