@@ -11,7 +11,6 @@
         };
         
         taps = [
-            "homebrew/services"
         ];
 
         brews = [
