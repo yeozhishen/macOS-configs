@@ -3,6 +3,7 @@
         ./core.nix
         ./git.nix
         ./shell.nix
+        ./vim.nix
     ];
     home = {
         username = username;

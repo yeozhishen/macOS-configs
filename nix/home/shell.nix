@@ -2,13 +2,14 @@
     programs.zsh = {
         enable = true;
         enableCompletion = true;
-        autosuggestion.enable = true;
+        autosuggestion.enable = false;
         initContent = ''
         # Editor config
         if [[ -n $SSH_CONNECTION ]]; then
             export EDITOR='vim'
         else
             export EDITOR='nvim'
+        fi
         # Custom function: yazi wrapper
         function y() {
             local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -17,6 +18,7 @@
                 builtin cd -- "$cwd"
             fi
             rm -f -- "$tmp"
+        }
         # Battery percentage function (macOS specific)
         function battery_percentage() {
             pmset -g batt | grep -o "[0-9]*%" | head -n 1
@@ -26,6 +28,7 @@
         source <(fzf --zsh)
         # Starship prompt
         eval "$(starship init zsh)"
+        eval "$(zoxide init --cmd cd zsh)"
         '';
     };
 }

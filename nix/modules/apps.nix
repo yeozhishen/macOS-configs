@@ -30,6 +30,9 @@
             "resvg"
             "imagemagick"
             "taskell"
+            "sketchybar"
+            "yamllint"
+            "uv"
         ];
 
         casks = [

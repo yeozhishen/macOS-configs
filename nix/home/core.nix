@@ -1,15 +1,13 @@
-{pkgs, ...}: {
+{pkgs, config,...}: {
     programs = {
         zsh = {
             enable = true;
-            enableCompletion = true;
             oh-my-zsh = {
                 enable = true;
                 theme  = "agnoster";
             };
         };
-        starship.enable = true;
-        fzf.enable = true;
+      };
+      home.file.".tmux.conf".source = ../../tmux/tmux.conf;
 
-    };
 }
