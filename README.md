@@ -17,3 +17,10 @@
 - enable system setting "Displays have separate Spaces" 
 - System Settings -> Desktop & Dock -> Displays have separate Spaces.
 - download ical-buddy from brew
+
+# NIX
+To load most of the system configs, install nix-darwin by following [https://github.com/nix-darwin/nix-darwin]
+, and run
+```
+sudo darwin-rebuild switch --flake .#zeus
+```
