@@ -1,13 +1,8 @@
-{ pkgs, ...}:
+{ pkgs, username, ...}:
 {
     system = {
         stateVersion = 5;
-        activationScripts.postUserActivation.text = ''
-        # activateSettings -u will reload the settings from the database and apply them to the current session,
-      # so we do not need to logout and login again to make the changes take effect.
-      /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
-    '';
-    
+        primaryUser = username; 
     
         defaults = {
             menuExtraClock.Show24Hour = true;
@@ -87,29 +82,19 @@
             };
         };
     };
-    
-    security.pam.enableSudoTouchIdAuth = true;
+    security.pam.services.sudo_local.touchIdAuth = true; 
     programs.zsh = {
         enable = true;
-        ohMyZsh = {
-            enable = true;
-        };
     };
     time.timeZone = "Asia/Singapore";
     fonts = {
         packages = with pkgs; [
             material-design-icons
             font-awesome
-            (nerdfonts.override {
-                fonts = [
-                    # symbols icon only
-                    "NerdFontsSymbolsOnly"
-                    # Characters
-                    "FiraCode"
-                    "JetBrainsMono"
-                    "Iosevka"
-                ];
-             })
+            nerd-fonts.symbols-only
+            nerd-fonts.fira-code
+            nerd-fonts.jetbrains-mono
+            nerd-fonts.iosevka
         ];
     };
 }
