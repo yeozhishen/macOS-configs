@@ -13,6 +13,7 @@
       python-syntax
     ];
     extraConfig = ''
+      syntax on
       set clipboard=unnamed
       " yaml file settings
       let g:indentLine_enabled = 1
