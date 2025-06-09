@@ -14,7 +14,6 @@
     ];
     extraConfig = ''
       syntax on
-      set clipboard=unnamed
       " yaml file settings
       let g:indentLine_enabled = 1
       autocmd FileType yaml,yml setlocal ts=2 sts=2 sw=2 expandtab

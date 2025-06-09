@@ -24,3 +24,4 @@ To load most of the system configs, install nix-darwin by following [https://git
 ```
 sudo darwin-rebuild switch --flake .#zeus
 ```
+****make sure ~/bin is cloned from git!!**

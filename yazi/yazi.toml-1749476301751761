@@ -9,5 +9,5 @@ prepend_previewers = [
 	{ mime = "application/x-xz",            run = "ouch" },
 ]
 
-[mgr]
+[manager]
 show_hidden = true

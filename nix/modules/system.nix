@@ -9,6 +9,22 @@
             dock = {
                 autohide = true;
                 show-recents = false;
+				persistent-apps = [
+				"/System/Library/CoreServices/Finder.app"
+    			"/System/Applications/Launchpad.app"
+				"/Applications/Microsoft Outlook.app"
+				"/Applications/Microsoft Word.app"
+				"/Applications/Microsoft Excel.app"
+				"/Applications/Microsoft PowerPoint.app"
+				"/Applications/Safari.app"
+				"/Applications/WhatsApp.app"
+				"/Applications/Telegram.app"
+				"/Applications/Mattermost.app"
+				"/Applications/iTerm.app"
+				"/Applications/zoom.us.app"
+				"/Applications/OpenVPN Connect.app"
+				"/System/Applications/System Settings.app"
+  				];
             };
 
             finder = {
@@ -32,7 +48,7 @@
 
                 InitialKeyRepeat = 15;  # normal minimum is 15 (225 ms), maximum is 120 (1800 ms)
                 # sets how fast it repeats once it starts.
-                KeyRepeat = 3;  # normal minimum is 2 (30 ms), maximum is 120 (1800 ms)
+                KeyRepeat = 2;  # normal minimum is 2 (30 ms), maximum is 120 (1800 ms)
 
                 NSAutomaticCapitalizationEnabled = true;  # disable auto capitalization
                 NSAutomaticDashSubstitutionEnabled = true;  # disable auto dash substitution

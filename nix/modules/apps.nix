@@ -7,7 +7,8 @@
     homebrew = {
         enable = true;
         onActivation = {
-            autoUpdate = false;
+          autoUpdate = true;
+          upgrade = true;
         };
         
         taps = [
@@ -42,7 +43,17 @@
             "aerospace"
             "mac-mouse-fix@2"
             "font-hack-nerd-font"
-        ];
+            "spotify"
+            "microsoft-office"
+            "zoom"
+            "whatsapp"
+            "openvpn-connect"
+            "mattermost"
+          ];
+
+        masApps = {
+          "lastpass" = 6504626762;
+        };
     };
 
 
