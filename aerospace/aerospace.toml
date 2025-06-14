@@ -50,7 +50,7 @@ automatically-unhide-macos-hidden-apps = false
 [key-mapping]
     preset = 'qwerty'
 
-# Gaps between windows (inner-*) and between monitor edges (outer-*).
+# tor.main = 16 }, { monitor."some-pattern" = 32 }, 24]Gaps between windows (inner-*) and between monitor edges (outer-*).
 # Possible values:
 # - Constant:     gaps.outer.top = 8
 # - Per monitor:  gaps.outer.top = [{ monitor.main = 16 }, { monitor."some-pattern" = 32 }, 24]
@@ -58,14 +58,15 @@ automatically-unhide-macos-hidden-apps = false
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
+
 [gaps]
+
     inner.horizontal = 10
     inner.vertical =   10
-    outer.left =       10
-    outer.bottom =     10
-    outer.top =        10
-    outer.right =      10
-
+    outer.top = [{ monitor."Built-in Retina Display" = 10 }, 40]
+    outer.left = [{ monitor."Built-in Retina Display" = 10 }, 20]
+    outer.bottom = [{ monitor."Built-in Retina Display" = 10 }, 20]
+    outer.right = [{ monitor."Built-in Retina Display" = 10 }, 20]
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 # 'main' binding mode must be always presented
