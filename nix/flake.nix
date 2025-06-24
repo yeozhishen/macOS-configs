@@ -27,7 +27,7 @@
       # Necessary for using flakes on this system.
       username = "zeus";
       system = "aarch64-darwin";
-      hostname = "zeus";
+      hostname = "zeus-desktop";
       useremail = "yeozhishen@gmail.com";
       gituser = "yeozhishen"; 
       specialArgs = 

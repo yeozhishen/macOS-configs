@@ -12,6 +12,8 @@
         };
         
         taps = [
+          "nikitabobko/tap"
+	      "felixKratz/formulae"
         ];
 
         brews = [
@@ -38,9 +40,8 @@
 
         casks = [
             "font-symbols-only-nerd-font"
-            "aerospace"
             "iterm2"
-            "aerospace"
+            "nikitabobko/tap/aerospace"
             "mac-mouse-fix@2"
             "font-hack-nerd-font"
             "spotify"
