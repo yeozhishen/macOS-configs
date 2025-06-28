@@ -36,6 +36,8 @@
             "sketchybar"
             "yamllint"
             "uv"
+            "lazygit"
+            "btop"
         ];
 
         casks = [
